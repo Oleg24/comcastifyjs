@@ -52,7 +52,7 @@ var comcastifyjs = (function () {
         loadSpeed: args.loadSpeed || 500,                     // how often in ms to pass
         randLoadIncrement: args.randLoadIncrement || false,   // true to randomize load increment
         loadIncrement: args.loadIncrement || 1,               // pixels to load per pass
-        randomPause: args.randomPause || 0.0                  // probability of skipping a pass
+        randomPause: args.randomPause || 0.0,                 // probability of skipping a pass
       };
 
       // make 'em load slow
@@ -75,7 +75,7 @@ var comcastifyjs = (function () {
         slowload.slothifyData = {
             img: img,
             imageTopClip: 0,
-            maxImageHeight: img.height * params.loadMaxPercent
+            maxImageHeight: img.height * params.loadMaxPercent,
         };
 
         // put box over image
@@ -102,7 +102,7 @@ var comcastifyjs = (function () {
 
   return {
     letsPrepareTheseImages: prepare,
-    fixMyImagesLoadingSoFast: slowImages
+    fixMyImagesLoadingSoFast: slowImages,
   };
 
 })();
